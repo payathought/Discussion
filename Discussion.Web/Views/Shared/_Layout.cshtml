@@ -1,0 +1,60 @@
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Discussion.Web</title>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/lib/kendo/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/lib/kendo/styles/kendo.fiori.min.css" rel="stylesheet" />
+    <link href="~/lib/toastr.js/toastr.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap-sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/lib/limonte-sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <link href="~/lib/jquery-ui-1.13.1/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap-editable/bootstrap-editable.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="~/css/pages/discussion/add-discussion-page.css" rel="stylesheet" asp-append-version="true" />
+</head>
+<body>
+     <input id="base-api-url" type="hidden" value="@Configuration["BaseApiUrl"]" />
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+           
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a  asp-controller="Home" asp-action="Index" class="nav-link text-dark" >Home |</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/js/helpers/string-helper.js" asp-append-version="true"></script>
+    <script src="~/lib/moment.js/moment.js"></script>
+    <script src="~/lib/limonte-sweetalert2/sweetalert2.min.js"></script>
+    <script src="~/js/helpers/api-helper.js" asp-append-version="true"></script>
+    <script src="~/js/services/api-service.js" asp-append-version="true"></script>
+    <script src="~/js/global-objects.js" asp-append-version="true"></script>
+    <script src="~/js/helpers/date-helper.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/kendo/js/kendo.all.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

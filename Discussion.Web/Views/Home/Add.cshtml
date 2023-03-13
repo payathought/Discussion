@@ -1,0 +1,78 @@
+﻿@model Discussion.Web.Models.Discussion.AddDiscussionViewModel
+@{
+    ViewData["Title"] = "Add Discussion";
+}
+
+<div id="page-wrapper" class="container-fluid p-3 p-md-5">
+    <div class="row">
+        <div class="col-12">
+            <form id="form">
+                <div class="row">
+                    <div class="col-lg-4 col-xl-3">
+                        <label class="section-header">Add Discussion</label>
+                    </div>
+                    <div class="col-lg-8 col-xl-6">
+                        <div class="row">
+                             <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label asp-for="ObserverId" class="control-label required"></label>
+                                    <input type="text" asp-for="ObserverId" class="form-control w-100" />
+                                    <span asp-validation-for="ObserverId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label asp-for="Subject" class="control-label required"></label>
+                                    <input type="text" asp-for="Subject" class="form-control" />
+                                    <span asp-validation-for="Subject" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label asp-for="Date" class="control-label required"></label>
+                                    <input type="text" asp-for="Date" class="form-control w-100" />
+                                    <span asp-validation-for="Date" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label asp-for="Location" class="control-label required"></label>
+                                    <input type="text" asp-for="Location" class="form-control" />
+                                    <span asp-validation-for="Location" class="text-danger"></span>
+                                </div>
+                            </div>
+                             <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label asp-for="Outcomes" class="control-label required">Outcome</label>
+                                    <input type="text" asp-for="Outcomes" class="form-control" />
+                                    <span asp-validation-for="Outcomes" class="text-danger"></span>
+                                </div>
+                            </div>     
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label asp-for="ColleaugesId" class="control-label required">Colleauges</label>
+                                    <input type="text" asp-for="ColleaugesId" class="form-control" />
+                                    <span asp-validation-for="ColleaugesId" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-12 text-right">
+                        <button id="submit" class="btn btn-primary">Save</button>
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-light">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/helpers/form-helper.js" asp-append-version="true"></script>
+    <script src="~/js/helpers/combo-box-helper.js" asp-append-version="true"></script>
+    <script src="~/js/helpers/kendo-helper.js" asp-append-version="true"></script>
+    <script src="~/js/pages/discussion/add-discussion.js" asp-append-version="true"></script>
+}

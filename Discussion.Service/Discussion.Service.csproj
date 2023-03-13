@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Discussion.Data\Discussion.Data.csproj" />
+    <ProjectReference Include="..\Discussion.Repository\Discussion.Repository.csproj" />
+    <ProjectReference Include="..\Discussion.Utilities\Discussion.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

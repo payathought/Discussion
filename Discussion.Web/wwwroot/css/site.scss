@@ -1,0 +1,508 @@
+﻿@import "../css/helpers/variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $fontFamily;
+}
+
+.discussion-title {
+    border: none;
+    color: #193b68;
+}
+.reason {
+    color: #193b68 !important;
+    text-decoration: none !important;
+}
+#page-container {
+    .page-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: $primaryFontColor;
+    }
+
+    #grid {
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+
+    body {
+        background-color: $primaryBackgroundColor;
+        height: 100%;
+        overflow-y: auto;
+
+        .form-control {
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .form-group {
+            position: relative;
+
+            .control-label {
+                color: $formControlLabelColor;
+                font-size: 12px;
+
+                &.required:before {
+                    content: "* ";
+                    color: red;
+                }
+            }
+        }
+
+        .font-size-small {
+            font-size: 12px;
+            margin-top: -10px;
+        }
+
+        // Bootstrap Overrides
+        .btn {
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #fff;
+            padding: 8px 12px;
+
+            &.btn-primary {
+                background-color: $primaryButtonColor;
+            }
+
+            &.btn-light {
+                color: $btnLightColor;
+                border: 1px solid $btnLightBorderColor;
+            }
+
+            &:focus,
+            &:active {
+                outline: none !important;
+                box-shadow: none;
+            }
+        }
+        // Kendo Overrides
+        .k-grid-toolbar {
+            background-color: #fff;
+            border: none;
+        }
+
+        .grid-toolbar {
+            margin-top: 19px;
+            background-color: #fff;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            padding: 16px 24px;
+            font-size: 14px;
+            border-bottom: 1px solid $gridBorderColor;
+
+            .grid-search-wrapper {
+
+                input {
+                    border: none;
+                    outline: none;
+                    font-size: 14px;
+                    color: $anchorFontColor;
+                    width: 80%;
+                }
+            }
+
+            .filter-dropdown {
+                float: right;
+
+                button {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    color: $anchorFontColor;
+
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+        }
+
+        .k-grid {
+            border: none;
+            background-color: #fff;
+            font-size: 14px;
+            padding: 12px 24px;
+
+            &.paged {
+                border-bottom-left-radius: 16px;
+                border-bottom-right-radius: 16px;
+            }
+
+            .k-grid-norecords {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #666;
+            }
+
+            .k-grid-header {
+                border: none;
+                padding: 0 !important;
+
+                .k-grid-header-wrap {
+                    border: none;
+
+                    tr {
+                        th {
+                            background-color: #fff;
+
+                            &.k-header {
+                                border: none;
+                                font-weight: bold;
+                                color: $primaryFontColor;
+                                padding-top: 7px;
+                                padding-bottom: 19px;
+                            }
+
+                            a {
+                                &.k-link {
+                                    color: $primaryFontColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .k-grid-content {
+                overflow-y: auto;
+
+                tbody {
+                    tr {
+                        height: 56px;
+                        border-radius: 4px;
+
+                        &:nth-Child(odd) {
+                            background-color: $primaryBackgroundColor;
+                        }
+
+                        &:nth-Child(even) {
+                            background-color: #fff;
+                        }
+
+                        td {
+                            border: none;
+                            height: 56px;
+                            color: $gridItemColor;
+
+                            .profile-picture {
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                            }
+
+                            .action-button {
+                                cursor: pointer;
+                            }
+
+                            .action-icon {
+                                cursor: pointer;
+                                color: #97a4b5;
+                                padding: 4px;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .k-pager-wrap {
+                background-color: #fff;
+                border: none;
+                padding: 5px 24px 26px;
+            }
+        }
+
+        .k-tabstrip-wrapper {
+            padding: 24px;
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: $wrapperBoxShadow;
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .k-tabstrip {
+                border: none;
+
+                .k-tabstrip-items {
+                    padding: 0;
+
+                    .k-item {
+                        font-size: 14px;
+                        color: $anchorFontColor;
+                        background-color: $primaryBackgroundColor;
+                        padding: 12px 0;
+                        border: none;
+
+                        .k-loading {
+                            border: none;
+                        }
+
+                        .k-link {
+                            padding: 0 16px;
+                            border-left: 1px solid $anchorFontColor;
+                            font-size: 14px;
+                            color: $anchorFontColor
+                        }
+
+                        &.k-first {
+                            border-radius: 4px 0px 0px 4px;
+
+                            .k-link {
+                                border-left: none;
+                            }
+                        }
+
+                        &.k-last {
+                            border-radius: 0px 4px 4px 0px;
+                        }
+
+                        &.k-state-active {
+                            background-color: $activeBackroundColor;
+
+                            .k-loading {
+                                border: none;
+                            }
+
+                            .k-link {
+                                color: #fff;
+                                border-left: none;
+                            }
+                        }
+                    }
+                }
+
+                .k-content {
+                    overflow: visible;
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+
+        .grid-pager {
+            background-color: #fff;
+            padding: 5px 24px 26px;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+
+            ul {
+                margin: 0;
+
+                li {
+                    display: inline;
+
+                    a {
+                        cursor: pointer;
+                        font-size: 14px;
+                        color: $primaryFontColor;
+                        user-select: none;
+                        width: 16px;
+                        padding: 0 4px 8px;
+                        margin: 0 4px;
+
+                        &.previous {
+                            padding: 0;
+                            margin-left: 0;
+                            margin-right: 8px;
+                        }
+
+                        &.next {
+                            padding: 0;
+                            margin-left: 8px;
+                            margin-right: 0;
+                        }
+                    }
+
+                    .active-underscore {
+                        display: none;
+                    }
+
+                    &.active {
+                        a {
+                            font-weight: bold;
+                            cursor: default;
+                            border-bottom: 4px solid $hyperlinkColor;
+                        }
+                    }
+                }
+            }
+        }
+
+        .k-textbox {
+            height: 40px;
+        }
+
+        .portals-container {
+            padding: 0 16px;
+            margin-top: 70px;
+
+            .portal-header {
+                padding: 0px 17px;
+                color: #424e8f;
+                margin-bottom: 0;
+                font-weight: bold;
+            }
+
+            .portal-wrapper {
+                display: block;
+
+                .portal-link {
+                    padding: 5px 17px;
+                    display: inline-block;
+                    font-weight: bold;
+                    color: #30b0db;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $smallDeviceWidth) {
+}
+
+@media (min-width: $mediumDeviceWidth) {
+    html {
+        body {
+          
+        }
+    }
+}
+
+#scheduled-notification-modal .modal-content {
+    border-radius: 0.8rem !important;
+}
+
+
+.scheduled-notification-modal-title {
+    border-bottom: none !important;
+}
+
+.scheduled-notification-title {
+    font-size: 23px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.notification-icon {
+    color: #1592FF;
+    font-size: 19px;
+}
+
+.notification-details {
+    color: #ababab;
+    font-weight: normal;
+    text-align: left;
+    font-size: 11px;
+}
+
+.notification-header {
+    display: block;
+    color: #b5b5b5;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.task-name, .task-date {
+    display:block;
+    text-align: left;
+    cursor:pointer
+}
+
+.card-item {
+    cursor: pointer;
+    border-radius: 0px !important;
+
+    &:hover {
+        background: #E2E4E9;
+    }
+}
+
+.task-name {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.task-date {
+    font-size: 13px;
+    color: #939393;
+}
+
+.notif-content-wrapper {
+    display: inline-block;
+    float: left;
+    margin-left: 31px;
+}
+.container{
+    height: 80%;
+}
+
+.notifications-container {
+    margin-top: 15px;
+    max-height: 270px;
+    overflow-y: auto;
+    min-height: 73px;
+}
+
+.task-name-content, .task-date-content {
+    display: block;
+    color: #b5b5b5;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.close-scheduler-modal {
+    width: 50px !important;
+}
+
+.task-text {
+    display: block;
+    color: #ababab;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.scheduler-remove-icon {
+    right: -10px;
+    position: absolute;
+    top: -20px;
+    font-size: 20px;
+}
+
+#scheduled-notification-modal {
+    z-index: 9999;
+
+    .modal-dialog {
+        width: 394px;
+    }
+
+    .modal-body {
+        padding: 1rem 0 0 0;
+    }
+}
+
+@media (min-width: $largeDeviceWidth) {
+}
+
+@media (min-width: $extraLargeDeviceWidth) {
+}

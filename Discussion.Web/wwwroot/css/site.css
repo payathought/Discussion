@@ -1,0 +1,409 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.discussion-title {
+  border: none;
+  color: #193b68;
+}
+
+.reason {
+  color: #193b68 !important;
+  text-decoration: none !important;
+}
+
+#page-container .page-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #193b68;
+}
+#page-container #grid {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+#page-container .btn {
+  width: 100%;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+html body {
+  background-color: #f3f9ff;
+  height: 100%;
+  overflow-y: auto;
+}
+html body .form-control:focus {
+  box-shadow: none;
+}
+html body .form-group {
+  position: relative;
+}
+html body .form-group .control-label {
+  color: #6a7e99;
+  font-size: 12px;
+}
+html body .form-group .control-label.required:before {
+  content: "* ";
+  color: red;
+}
+html body .font-size-small {
+  font-size: 12px;
+  margin-top: -10px;
+}
+html body .btn {
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #fff;
+  padding: 8px 12px;
+}
+html body .btn.btn-primary {
+  background-color: #1592ff;
+}
+html body .btn.btn-light {
+  color: #6a7e99;
+  border: 1px solid #97a4b5;
+}
+html body .btn:focus, html body .btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+html body .k-grid-toolbar {
+  background-color: #fff;
+  border: none;
+}
+html body .grid-toolbar {
+  margin-top: 19px;
+  background-color: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 16px 24px;
+  font-size: 14px;
+  border-bottom: 1px solid #d7e8f9;
+}
+html body .grid-toolbar .grid-search-wrapper input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #6a7e99;
+  width: 80%;
+}
+html body .grid-toolbar .filter-dropdown {
+  float: right;
+}
+html body .grid-toolbar .filter-dropdown button {
+  background: none;
+  border: none;
+  outline: none;
+  color: #6a7e99;
+}
+html body .grid-toolbar .filter-dropdown button:after {
+  content: none;
+}
+html body .k-grid {
+  border: none;
+  background-color: #fff;
+  font-size: 14px;
+  padding: 12px 24px;
+}
+html body .k-grid.paged {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+html body .k-grid .k-grid-norecords {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+html body .k-grid .k-grid-header {
+  border: none;
+  padding: 0 !important;
+}
+html body .k-grid .k-grid-header .k-grid-header-wrap {
+  border: none;
+}
+html body .k-grid .k-grid-header .k-grid-header-wrap tr th {
+  background-color: #fff;
+}
+html body .k-grid .k-grid-header .k-grid-header-wrap tr th.k-header {
+  border: none;
+  font-weight: bold;
+  color: #193b68;
+  padding-top: 7px;
+  padding-bottom: 19px;
+}
+html body .k-grid .k-grid-header .k-grid-header-wrap tr th a.k-link {
+  color: #193b68;
+}
+html body .k-grid .k-grid-content {
+  overflow-y: auto;
+}
+html body .k-grid .k-grid-content tbody tr {
+  height: 56px;
+  border-radius: 4px;
+}
+html body .k-grid .k-grid-content tbody tr:nth-Child(odd) {
+  background-color: #f3f9ff;
+}
+html body .k-grid .k-grid-content tbody tr:nth-Child(even) {
+  background-color: #fff;
+}
+html body .k-grid .k-grid-content tbody tr td {
+  border: none;
+  height: 56px;
+  color: #193b68;
+}
+html body .k-grid .k-grid-content tbody tr td .profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+html body .k-grid .k-grid-content tbody tr td .action-button {
+  cursor: pointer;
+}
+html body .k-grid .k-grid-content tbody tr td .action-icon {
+  cursor: pointer;
+  color: #97a4b5;
+  padding: 4px;
+  font-size: 16px;
+}
+html body .k-grid .k-pager-wrap {
+  background-color: #fff;
+  border: none;
+  padding: 5px 24px 26px;
+}
+html body .k-tabstrip-wrapper {
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 3px 6px rgba(21, 146, 255, 0.16);
+}
+html body .k-tabstrip-wrapper * {
+  box-sizing: border-box;
+}
+html body .k-tabstrip-wrapper .k-tabstrip {
+  border: none;
+}
+html body .k-tabstrip-wrapper .k-tabstrip .k-tabstrip-items {
+  padding: 0;
+}
+html body .k-tabstrip-wrapper .k-tabstrip .k-tabstrip-items .k-item {
+  font-size: 14px;
+  color: #6a7e99;
+  background-color: #f3f9ff;
+  padding: 12px 0;
+  border: none;
+}
+html body .k-tabstrip-wrapper .k-tabstrip .k-tabstrip-items .k-item .k-loading {
+  border: none;
+}
+html body .k-tabstrip-wrapper .k-tabstrip .k-tabstrip-items .k-item .k-link {
+  padding: 0 16px;
+  border-left: 1px solid #6a7e99;
+  font-size: 14px;
+  color: #6a7e99;
+}
+html body .k-tabstrip-wrapper .k-tabstrip .k-tabstrip-items .k-item.k-first {
+  border-radius: 4px 0px 0px 4px;
+}
+html body .k-tabstrip-wrapper .k-tabstrip .k-tabstrip-items .k-item.k-first .k-link {
+  border-left: none;
+}
+html body .k-tabstrip-wrapper .k-tabstrip .k-tabstrip-items .k-item.k-last {
+  border-radius: 0px 4px 4px 0px;
+}
+html body .k-tabstrip-wrapper .k-tabstrip .k-tabstrip-items .k-item.k-state-active {
+  background-color: #1592ff;
+}
+html body .k-tabstrip-wrapper .k-tabstrip .k-tabstrip-items .k-item.k-state-active .k-loading {
+  border: none;
+}
+html body .k-tabstrip-wrapper .k-tabstrip .k-tabstrip-items .k-item.k-state-active .k-link {
+  color: #fff;
+  border-left: none;
+}
+html body .k-tabstrip-wrapper .k-tabstrip .k-content {
+  overflow: visible;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+html body .grid-pager {
+  background-color: #fff;
+  padding: 5px 24px 26px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+html body .grid-pager ul {
+  margin: 0;
+}
+html body .grid-pager ul li {
+  display: inline;
+}
+html body .grid-pager ul li a {
+  cursor: pointer;
+  font-size: 14px;
+  color: #193b68;
+  user-select: none;
+  width: 16px;
+  padding: 0 4px 8px;
+  margin: 0 4px;
+}
+html body .grid-pager ul li a.previous {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 8px;
+}
+html body .grid-pager ul li a.next {
+  padding: 0;
+  margin-left: 8px;
+  margin-right: 0;
+}
+html body .grid-pager ul li .active-underscore {
+  display: none;
+}
+html body .grid-pager ul li.active a {
+  font-weight: bold;
+  cursor: default;
+  border-bottom: 4px solid #1592ff;
+}
+html body .k-textbox {
+  height: 40px;
+}
+html body .portals-container {
+  padding: 0 16px;
+  margin-top: 70px;
+}
+html body .portals-container .portal-header {
+  padding: 0px 17px;
+  color: #424e8f;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+html body .portals-container .portal-wrapper {
+  display: block;
+}
+html body .portals-container .portal-wrapper .portal-link {
+  padding: 5px 17px;
+  display: inline-block;
+  font-weight: bold;
+  color: #30b0db;
+  font-size: 14px;
+}
+
+#scheduled-notification-modal .modal-content {
+  border-radius: 0.8rem !important;
+}
+
+.scheduled-notification-modal-title {
+  border-bottom: none !important;
+}
+
+.scheduled-notification-title {
+  font-size: 23px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.notification-icon {
+  color: #1592FF;
+  font-size: 19px;
+}
+
+.notification-details {
+  color: #ababab;
+  font-weight: normal;
+  text-align: left;
+  font-size: 11px;
+}
+
+.notification-header {
+  display: block;
+  color: #b5b5b5;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.task-name, .task-date {
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+.card-item {
+  cursor: pointer;
+  border-radius: 0px !important;
+}
+.card-item:hover {
+  background: #E2E4E9;
+}
+
+.task-name {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.task-date {
+  font-size: 13px;
+  color: #939393;
+}
+
+.notif-content-wrapper {
+  display: inline-block;
+  float: left;
+  margin-left: 31px;
+}
+
+.container {
+  height: 80%;
+}
+
+.notifications-container {
+  margin-top: 15px;
+  max-height: 270px;
+  overflow-y: auto;
+  min-height: 73px;
+}
+
+.task-name-content, .task-date-content {
+  display: block;
+  color: #b5b5b5;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.close-scheduler-modal {
+  width: 50px !important;
+}
+
+.task-text {
+  display: block;
+  color: #ababab;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.scheduler-remove-icon {
+  right: -10px;
+  position: absolute;
+  top: -20px;
+  font-size: 20px;
+}
+
+#scheduled-notification-modal {
+  z-index: 9999;
+}
+#scheduled-notification-modal .modal-dialog {
+  width: 394px;
+}
+#scheduled-notification-modal .modal-body {
+  padding: 1rem 0 0 0;
+}

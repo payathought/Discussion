@@ -1,0 +1,135 @@
+﻿html {
+  overflow: hidden;
+}
+html .k-multiselect {
+  height: auto !important;
+  min-height: 36px !important;
+}
+html #page-wrapper {
+  height: 90vh;
+  overflow-y: auto;
+}
+html #page-wrapper form {
+  background-color: #fff;
+  padding: 54px 32px;
+  box-shadow: 0px 3px 6px rgba(21, 146, 255, 0.16);
+  border-radius: 16px;
+  padding: 33px 24px;
+  box-shadow: none;
+}
+html #page-wrapper form .form-group {
+  position: relative;
+}
+html #page-wrapper form .form-group .control-label {
+  color: #6a7e99;
+  font-size: 12px;
+}
+html #page-wrapper form .form-group .control-label.required:before {
+  content: "* ";
+  color: red;
+}
+html #page-wrapper form .form-group input[type=text],
+html #page-wrapper form .form-group input[type=password],
+html #page-wrapper form .form-group input[type=email],
+html #page-wrapper form .form-group .k-multiselect-wrap {
+  border: 1px solid #97a4b5;
+  border-radius: 4px;
+  height: 36px;
+  font-size: 12px;
+}
+html #page-wrapper form .form-group input[type=text].k-input,
+html #page-wrapper form .form-group input[type=password].k-input,
+html #page-wrapper form .form-group input[type=email].k-input,
+html #page-wrapper form .form-group .k-multiselect-wrap.k-input {
+  border: none;
+}
+html #page-wrapper form .form-group input[type=text]:focus, html #page-wrapper form .form-group input[type=text]:active,
+html #page-wrapper form .form-group input[type=password]:focus,
+html #page-wrapper form .form-group input[type=password]:active,
+html #page-wrapper form .form-group input[type=email]:focus,
+html #page-wrapper form .form-group input[type=email]:active,
+html #page-wrapper form .form-group .k-multiselect-wrap:focus,
+html #page-wrapper form .form-group .k-multiselect-wrap:active {
+  border-color: #1592ff;
+  outline: none;
+  box-shadow: none;
+}
+html #page-wrapper form .form-group.password-form-group input[type=password] {
+  padding-right: 32px;
+}
+html #page-wrapper form .form-group.password-form-group .toggle-password-visibility-icon {
+  top: 34px;
+  right: 8px;
+  position: absolute;
+  cursor: pointer;
+}
+html #page-wrapper form .form-group a {
+  color: #6a7e99;
+  font-size: 14px;
+}
+html #page-wrapper form .form-group .field-validation-error {
+  font-size: 12px;
+}
+html #page-wrapper form .form-group input[type=submit] {
+  color: #fff;
+  background-color: #1592ff;
+  border-radius: 8px;
+  height: 42px;
+  font-size: 14px;
+}
+html #page-wrapper form .form-group .k-datepicker {
+  border: none;
+  box-shadow: none;
+}
+html #page-wrapper form .form-group .k-datepicker .k-picker-wrap {
+  border: 1px solid #97a4b5;
+  border-radius: 4px;
+}
+html #page-wrapper form .form-group .k-datepicker .k-picker-wrap .k-input {
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #495057;
+}
+html #page-wrapper form .form-group .k-datepicker .k-picker-wrap .k-select {
+  border: none;
+}
+html #page-wrapper form .form-group .k-dropdown {
+  border: none;
+  box-shadow: none;
+}
+html #page-wrapper form .form-group .k-dropdown .k-dropdown-wrap {
+  border: 1px solid #97a4b5;
+  border-radius: 4px;
+}
+html #page-wrapper form .form-group .k-dropdown .k-dropdown-wrap .k-input {
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #495057;
+}
+html #page-wrapper form > .row .section-header {
+  font-size: 16px;
+  font-weight: bold;
+  color: #193b68;
+}
+html #page-wrapper form > .row .btn {
+  width: 100%;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+html #page-wrapper form #event-photo-container {
+  display: flex;
+  justify-content: center;
+}
+html #page-wrapper form #event-photo-container #event-photo {
+  cursor: pointer;
+  max-height: 50vh;
+}
+
+@media (min-width: 768px) {
+  html #page-wrapper form > .row .btn {
+    width: 100px;
+    margin-bottom: 0;
+  }
+}

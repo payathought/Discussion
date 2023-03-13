@@ -1,0 +1,67 @@
+﻿@import '../../helpers/mixins.scss';
+
+html {
+    overflow: hidden;
+   .k-multiselect {
+       height: auto !important;
+       min-height: 36px !important;
+   } 
+    #page-wrapper {
+        height: 90vh;
+        overflow-y: auto;
+
+        form {
+            @include standardForm();
+            padding: 33px 24px;
+            box-shadow: none;
+
+            > .row {
+                .section-header {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: $primaryFontColor;
+                }
+
+                .btn {
+                    width: 100%;
+                    line-height: 24px;
+                    margin-bottom: 4px;
+                }
+            }
+
+            #event-photo-container {
+                display:flex;
+                justify-content: center;
+
+                #event-photo {
+                    cursor: pointer;
+                    max-height: 50vh;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $smallDeviceWidth) {
+}
+
+@media (min-width: $mediumDeviceWidth) {
+    html {
+        #page-wrapper {
+            form {
+                > .row {
+                    .btn {
+                        width: 100px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $largeDeviceWidth) {
+}
+
+@media (min-width: $extraLargeDeviceWidth) {
+}
